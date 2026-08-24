@@ -21,7 +21,7 @@ var rootCmd = &cobra.Command{
 		if rootPstFlags.verbose {
 			options.Level = slog.LevelDebug
 		}
-		logger := slog.New(tint.NewHandler(os.Stderr, options))
+		logger := slog.New(tint.NewTextHandler(os.Stderr, options))
 		slog.SetDefault(logger)
 	},
 }

@@ -1,9 +1,9 @@
 module github.com/yz4230/go-cli-template
 
-go 1.26
+go 1.27
 
 require (
-	github.com/lmittmann/tint v1.1.3
+	github.com/lmittmann/tint v1.2.0
 	github.com/spf13/cobra v1.10.2
 )
 
