@@ -1,0 +1,7 @@
+[tasks.build]
+description = "Build the binary into dist/"
+run = "go build -o dist/go-cli-template ."
+
+[tasks.tag]
+description = "Tag the next release: mise run tag <major|minor|patch|M|m|p> [--dry-run]"
+run = "scripts/tag.sh"
