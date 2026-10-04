@@ -6,6 +6,7 @@ A minimal template for building Go command-line applications with Cobra and stru
 
 - Cobra-based CLI entrypoint
 - Global `--verbose` / `-v` flag
+- `--version` flag that prints the build version
 - Semantic-versioned releases with GoReleaser and GitHub Actions
 - Structured logging with `log/slog`
 - Colorized terminal log output with `tint`
@@ -53,6 +54,18 @@ Build a binary:
 mise run build
 ./dist/go-cli-template --verbose
 ```
+
+Print the version:
+
+```bash
+./dist/go-cli-template --version
+```
+
+The version comes from the build info the Go toolchain records: the tag when
+built from a clean checkout of a `vX.Y.Z` tag (as release builds are) or with
+`go install github.com/yz4230/go-cli-template@v1.2.3`, otherwise a
+pseudo-version (with `+dirty` for uncommitted changes), and `(devel)` for
+`go run`.
 
 ## Release
 
